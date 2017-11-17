@@ -115,7 +115,10 @@ add_action( 'widgets_init', 'dme3115_widgets_init' );
  */
 function dme3115_scripts() {
 	wp_enqueue_style( 'dme3115-style', get_stylesheet_uri() );
-
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Quicksand:400,700,300' );
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans' );
+	wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css' );
+	
     /* Add Foundation CSS */
 	wp_enqueue_style( 'foundation-normalize', get_stylesheet_directory_uri() . '/foundation/css/normalize.css' );
 	wp_enqueue_style( 'foundation', get_stylesheet_directory_uri() . '/foundation/css/foundation.css' );
@@ -126,6 +129,8 @@ function dme3115_scripts() {
 	/* Add Foundation JS */
 	wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/foundation/js/foundation.min.js', array( 'jquery' ), '1', true );
 	wp_enqueue_script( 'foundation-modernizr-js', get_template_directory_uri() . '/foundation/js/vendor/modernizr.js', array( 'jquery' ), '1', true );
+	wp_enqueue_script( 'fix-masonry', get_template_directory_uri() . '/js/imagesloaded.pkgd.min.js', array( 'jquery' ), '1', true );
+	wp_enqueue_script( 'masonry', get_template_directory_uri() . '/js/masonry.pkgd.min.js', array( 'jquery' ), '1', true );
 
 	/* Foundation Init JS */
 	wp_enqueue_script( 'foundation-init-js', get_template_directory_uri() . '/foundation.js', array( 'jquery' ), '1', true );
@@ -139,6 +144,26 @@ function dme3115_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'dme3115_scripts' );
+
+ /**
+ * Show custom post types on default category pages
+ * Reference – https://wordpress.org/support/topic/problem-with-categories-20
+ */
+function valeriak_add_custom_types_to_tax( $query ) {
+    // Prevent unintended effects in the admin and non-main queries
+    if ( is_admin() || ! $query->is_main_query() ) {
+        return;
+    }
+
+    if ( is_category() || is_tag() ) {
+        $post_types = array( 'post', 'work' );
+        $query->set( 'post_type', $post_types );
+        return $query;
+    }
+}
+add_filter( 'pre_get_posts', 'valeriak_add_custom_types_to_tax' );
+
+
 
 /**
  * Implement the Custom Header feature.

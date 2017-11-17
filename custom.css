@@ -1,0 +1,528 @@
+#secondary {
+display: none;
+}
+
+body {
+	background-color: white;
+}
+
+.container {
+	width:100%;
+	height:100%;
+}
+
+.content {
+	margin-top: 50px;
+	width: 90%;
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+p {
+	font-family: 'MS Sans Serif', Geneva, sans-serif;
+	color: #9D8970;
+}
+
+a {
+	font-weight: bold;
+	color: #82D8CF;
+}
+
+a:visited {
+	color: #82D8CF;
+
+}
+
+
+a:hover {
+	color: #222222;
+}
+
+.nonmobile {
+	display: none;
+}
+
+@media screen and (min-width:1000px){
+	.content {
+		margin-top: 50px;
+		width: 80%;
+		margin-left: 20%;
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+
+	.nonmobile {
+		display: inline;
+	}
+}
+
+
+
+/* ----------------------------Header---------------------------- */
+.nav_list {
+  width: 100%;
+  position: static;
+  top: 0;
+  padding: 20px 4%;
+  text-align: center;
+  background-color: #222222;
+  z-index: 1;
+  font-family: 'Quicksand', sans-serif;
+
+}
+
+.nav_list h1 {
+  margin: 0 0 9px;
+  font-size: 1.875em;
+  font-weight: 300;
+  line-height: 1;
+  text-transform: uppercase;
+  font-family: 'Quicksand', sans-serif;
+
+}
+
+.nav_list ul {
+  margin: 0;
+  list-style: none;
+}
+
+ul#primary-menu.menu {
+	text-transform: uppercase;
+}
+
+ul.sub-menu {
+	text-transform: none;
+}
+
+ul.sub-menu li {
+	display: none;
+}
+
+@media screen and (min-width:1000px){
+	ul.sub-menu li {
+		margin-bottom: 0;
+		padding-left: 10px;
+		display: block;
+	}
+
+}
+
+.nav_list li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.nav_list a {
+  font-weight: 300;
+  text-decoration: none;
+  color: #FFFBF3;
+  text-align: center;
+}
+.nav_list a:hover {
+  color: #E0C8A6;
+}
+
+
+.nav_list a img {
+	height: 50px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+
+@media screen and (min-width:1000px){
+  .nav_list {
+  	position: fixed;
+    width: 20%;
+    height: 100%;
+    padding: 80px 50px;
+    text-align: left;
+  }
+
+  .nav_list h1 {
+    padding-bottom: 12px;
+    margin:0;
+  }
+
+  .nav_list li {
+    display: block;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  .nav_list a img {
+  	height:100px;
+  	margin-bottom: 20px;
+  }
+
+}
+
+/* ----------------------------Heros---------------------------- */
+
+.hero {
+	background-color: #9D8970;
+	height: 30%;
+	width: 100%;
+	padding-top: 40px;
+}
+
+.hero h1 {
+	color: white;
+ 	font-family: 'Quicksand', sans-serif;
+ 	text-transform: uppercase;
+ 	text-align: center;
+}
+
+@media screen and (min-width:1000px){
+	.hero {
+		padding-top: 75px;
+	}
+
+	.hero h1 {
+		margin-left: 20%;
+		padding-left: 100px;
+		text-align: left;
+	}
+}
+
+
+/* ----------------------------Splash Page---------------------------- */
+.background {
+	height: 100%;
+	/*background-image: url("http://thewallgraphic.shannonmalloy.com/dme3115-wp/wordpress/wp-content/uploads/Desk_ForWeb.jpg");*/
+	background-color: #82D8CF;
+    background-size: cover;
+}
+
+#splash {
+	margin:0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+#splash .splashcontain {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 75%;
+}
+
+#splash img {
+}
+
+#splash h1 {
+	color: #9D8970;
+	text-align: center;
+	line-height: 1;
+	margin-top: 0;
+	text-transform: uppercase;
+	padding-bottom: 40px;
+}
+
+#splash h1 .design {
+	font-weight: bold;
+}
+
+#splash .enterButtons {
+	text-align: center;
+	font-family: 'Quicksand', sans-serif;
+}
+
+#splash .enterButtons h1.inline { 
+	display: none;
+	padding-left: 0px;
+}
+
+#splash .enterButtons a {
+	background-color: #FFFBF3;
+	padding: 10px 25px;
+	margin: 10px;
+	border-radius: 50px;
+	color: #82D8CF;
+	text-transform: uppercase;
+}
+
+#splash .enterButtons a:hover {
+	background-color: #9D8970;
+	color: #FFFBF3;
+}
+
+
+@media screen and (min-width:1000px){
+	#splash h1 {
+		margin-top: 0;
+		margin-bottom: 50px;
+	}
+
+	#splash .enterButtons a {
+	padding: 20px 30px;
+	margin: 10px;
+	}
+
+	#splash .enterButtons h1.inline { 
+		display: inline;
+		padding-left: 12px;
+	}
+
+	#splash img {
+		width: 247.003px;
+	}
+
+}
+
+/* ----------------------------ALL Projects home Page---------------------------- */
+
+h1 {
+	line-height: 1;
+	text-transform: uppercase;
+	font-family: 'Quicksand', sans-serif;
+}
+
+div.projectdescrip {
+
+}
+
+div.projectrow {
+	width: 100%;
+	background-color: #9D8970;
+	margin-bottom: 20px;
+}
+
+div.projectimg {
+	padding: 0;
+}	
+
+div.projectdescrip p {
+	color: white;
+}
+
+div.projectdescrip a {
+	color: white;
+}
+
+@media screen and (min-width:1000px){
+	div.projectrow {
+		margin-bottom: 40px;
+	}
+
+	div.projectdescrip {
+		float: left;
+		padding: 40px;
+	}
+
+	div.projectimg img {
+		margin: 0;
+	}
+
+
+}
+
+/* ----------------------------Web/print home page---------------------------- */
+
+.grid-item { 
+	width: 100%; 
+}
+
+.projpicrow {
+	padding-bottom: 25px;
+}
+
+.projpicrow img {
+	width: 100%;
+	display: block;
+}
+
+.projpicrow img:hover {
+
+}
+
+.projpicrow ul li {
+	padding: 10px;
+}
+
+
+@media screen and (min-width:1000px){
+	.grid-item { 
+		width: 30%; 
+		float: left;
+	}
+	.grid-item--width2 { 
+		width: 40%; 
+	}
+}
+
+span.hovertext {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  cursor: pointer;
+  display: table;
+  left: 0;
+  position: absolute;
+  top: 0;
+  margin: 10px;
+  padding: 10px;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  transition: opacity 500ms;
+
+}
+
+span.hovertext span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+ul.gridcontainer li:hover span.texthover {
+  opacity: 1;
+}
+
+
+/* ----------------------------project write up Page---------------------------- */
+
+.project-section {
+	margin-bottom: 20px;
+	margin-top: 50px;
+	border-bottom: #9D8970 solid 1px;
+}
+
+.project-section h2 {
+	color: #9D8970;
+	font-family: 'Quicksand', sans-serif;
+}
+
+div .link {
+	font-family: 'Quicksand', sans-serif;
+	color: #9D8970;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+div .link:hover {
+	opacity: .5;
+}
+
+div .link.previous {
+	text-align: right;
+}
+
+div .link.next {
+	text-align: left;
+}
+
+h3 {
+	font-family: 'Quicksand', sans-serif;
+	text-transform: uppercase;
+	line-height: 1.5;
+	color: #9D8970;
+}
+
+
+/* ----------------------------About Page---------------------------- */
+
+.skills {
+	margin-bottom: 50px;
+}
+
+.resume {
+	background-color: #9D8970;
+}
+
+.resume h1 {
+	width: 90%;
+	margin-right: 5%;
+	margin-left: 5%;
+	color: white;
+	padding-top: 20px;
+}
+
+.resume a i {
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 90px;
+	width: 80%;
+	margin-left: 20%;
+	padding-left: 100px;
+	padding-right: 100px;
+	color: #FFFBF3;
+	text-decoration: none;
+}
+
+.resume a i:hover {
+	opacity: .5;
+}
+
+.hireme {
+	text-align: center;
+}
+
+
+.hireme h2 a {
+	font-family: 'Quicksand', sans-serif;
+	text-transform: uppercase;
+	color: #9D8970;
+	text-decoration: none;
+}
+
+.hireme h2 a:hover {
+	opacity: .5;
+}
+
+
+
+@media screen and (min-width:1000px){ 
+	.resume h1, i {
+		width: 80%;
+		margin-left: 20%;
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+
+	.skills .mobile {
+		display: none;
+	}
+}
+
+
+
+/* ----------------------------footer---------------------------- */
+
+.footer {
+	width: 100%;
+	background-color: #9D8970;
+	padding: 5px 0px; 
+	margin-top: 50px;
+	display: block;
+}
+
+.space {
+	display: none;
+}
+
+.footer p {
+	color: white;
+	text-align: center;
+	margin: 0;
+}
+
+@media screen and (min-width:1000px){
+
+	.footer p {
+		width: 80%;
+		margin-left: 20%;
+	}
+
+	.footer {
+		display: none;
+	}
+
+	.space {
+	display: block;
+}
+
+
+}

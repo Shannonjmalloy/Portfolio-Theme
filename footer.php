@@ -10,19 +10,18 @@
  */
 
 ?>
+<div class="space">
+	<br/>
+	<br/>
+	<br/>
+</div>
 
-	</div><!-- #content -->
+<div class="footer">
+<p> Shannon Malloy &copy; 2016 </p>
+</div>
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'dme3115' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'dme3115' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'dme3115' ), 'dme3115', '<a href="http://www.jwu.edu" rel="designer">JWU Graphic Design and Digital Media</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
 
 <?php wp_footer(); ?>
-
+</div>
 </body>
 </html>

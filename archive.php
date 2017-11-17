@@ -9,23 +9,27 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+  <div class="hero">
+  <h1>Projects</h1>
+  </div>
+  <div class ="clearfix"></div>
+	<div class="content">
+		<div class="grid projpicrow">
+		  <div class="small-12">
+		      <ul class="gridcontainer small-block-grid-1 medium-block-grid-3 large-block-grid-4">
 
 		<?php
 		if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
-
 			<?php
 			/* Start the Loop */
-			while ( have_posts() ) : the_post();
-
+			while ( have_posts() ) : the_post();?>
+			<li>
+			<a href="<?php the_permalink(); ?>">
+				<?php the_post_thumbnail(); ?>
+			</a>
+			</li>
+			<?php
 				/*
 				 * Include the Post-Format-specific template for the content.
 				 * If you want to override this in a child theme, then include a file
@@ -43,8 +47,12 @@ get_header(); ?>
 
 		endif; ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+		    </ul>
+		</div><!--close column -->
+		</div><!--close grid project row -->
+		</div><!-- closer id=content -->
+		<div class="clearfix"></div>
+</div>
 
 <?php
 get_sidebar();
